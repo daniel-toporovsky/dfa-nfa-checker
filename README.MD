@@ -125,7 +125,7 @@ if __name__ == "__main__":
       "q6":{Automaton.EPSILON:{"q5"}},
     }
     nfa = NFA(Qn, Σn, δn, "q0", {"q6"})
-    nfa.draw_compact(fmt="ascii")
+    nfa.draw_graph_easy(unicode=True)
     nfa.run("011")
     nfa.test_against(lambda w: (w.startswith("10") or w.startswith("011"))
                               and (w.endswith("00") or w.endswith("11")),
